@@ -1,0 +1,97 @@
+{% extends "index.html" %} {% block title %} Sign Up {% endblock %} {% block
+body %}
+
+<img class="wave" src="static/images/login_images/login_3.png" />
+<div class="container">
+  <div class="login-content">
+    <form method="POST">
+      <h2 class="title">Welcome</h2>
+      <div class="input-div one">
+        <div class="i">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="div">
+          <!-- <h5>Email</h5> -->
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </div>
+      </div>
+      <div class="input-div pass">
+        <div class="i">
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="div">
+          <!-- <h5>username</h5> -->
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+          />
+        </div>
+      </div>
+      <div class="input-div pass">
+        <div class="i">
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="div">
+          <!-- <h5>Password</h5> -->
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Create Password"
+          />
+        </div>
+      </div>
+      <div class="input-div pass">
+        <div class="i">
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="div">
+          <!-- <h5>Confirm Password</h5> -->
+          <input
+            type="password"
+            name="password1"
+            id="password1"
+            placeholder="Confirm Password"
+          />
+        </div>
+      </div>
+      <a href="#">Terms and Condition</a>
+      <input type="submit" class="btn" value="Sign Up" />
+    </form>
+  </div>
+</div>
+<!-- <h2 align="center">This is our Sign Up page</h2>
+<form method="POST">
+  <h3>Enter sign-up information</h3>
+  <div>
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email" placeholder="Email Address" />
+  </div>
+  <div>
+    <label for="username">First Name</label
+    ><input type="text" name="username" id="username" placeholder="User name" />
+  </div>
+  <div>
+    <label for="password">Password</label
+    ><input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Password"
+    />
+  </div>
+  <div>
+    <label for="password1">Password-Confirm</label
+    ><input
+      type="password1"
+      name="password1"
+      id="password1"
+      placeholder="Password-Confirm"
+    />
+  </div>
+  <br />
+  <button type="submit">Submit</button>
+</form> -->
+{% endblock %}

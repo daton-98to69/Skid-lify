@@ -1,0 +1,142 @@
+{% extends "index.html" %} {% block title %} Home {% endblock %} {% block body
+%}
+<div class="back">
+  <div class="small-header">
+    <p>
+      Connecting Skidmore's community through shared experiences and
+      opportunities.
+    </p>
+  </div>
+
+  <div class="dropdown_menu">
+    <form>
+      <select class="dropdown" onchange="location = this.value;">
+        <option value="Skid-Together-Draft.html">SKID-TOGETHER</option>
+        <option value="whats-happening.html">What's Happening</option>
+        <option value="coffee-talks.html">Coffee Talks</option>
+        <option value="dorm-battles.html">Dorm Battles</option>
+        <option value="groups.html">Groups</option>
+        <option value="campus-resources.html">Campus Resources</option>
+        <option value="about-us.html">About us</option>
+      </select>
+    </form>
+  </div>
+  <div class="shortcuts">
+    <a href="Skid-Together-Draft.html"> <i class="fas fa-home"></i> </a>
+    <a href="chat.html"> <i class="fas fa-comment"></i> </a>
+    <a href="gallery.html"> <i class="fas fa-images"></i> </a>
+    <a href="link-to-page4"> <i class="fas fa-user"></i> </a>
+    <a href="link-to-page5"> <i class="fas fa-users"></i> </a>
+    <a href="link-to-page6"> <i class="fas fa-cog"></i> </a>
+  </div>
+  <div class="coffee-talks">
+    <button class="coffee-button">
+      <i class="fa fa-coffee"></i>
+      Coffee Talks
+    </button>
+    <button class="coffee-post">
+      <img src="static/images/Skidmore app.jpg" alt="coffee post image" />
+      <div class="coffee-post-text">
+        <div><h3>Talk about Cosmos</h3></div>
+        <div><p>Location: Case Center, Infront of Lib</p></div>
+        <div><p>30 Jan, 2023</p></div>
+      </div>
+    </button>
+    <button class="coffee-post">
+      <img src="static/images/Skid-2.jpg" alt="coffee post image" />
+      <div class="coffee-post-text">
+        <div><h3>Code the Next???</h3></div>
+        <div><p>Location: CIS Lobby</p></div>
+        <div><p>4 Feb, 2023</p></div>
+      </div>
+    </button>
+    <button class="coffee-post">
+      <img src="static/images/Skid 3.jpg" alt="coffee post image" />
+      <div class="coffee-post-text">
+        <div><h3>Lets Read!!</h3></div>
+        <div><p>Location: Library</p></div>
+        <div><p>8 Feb, 2023</p></div>
+      </div>
+    </button>
+    <button class="coffee-post">
+      <img src="static/images/cofee1.jpg" alt="coffee post image" />
+      <div class="coffee-post-text">
+        <div><h3>Ice Hockey and Talk!</h3></div>
+        <div><p>Location: Williamson Sports</p></div>
+        <div><p>8 Feb, 2023</p></div>
+      </div>
+    </button>
+  </div>
+  <div class="posts">
+    <div class="post-box">
+      <div class="header">
+        <div class="profile-pic"></div>
+        <div class="name">Sibam Gupta</div>
+      </div>
+      <div class="main">
+        <img src="static/images/libraryfront_socialsetting.jpg".jpg" alt="Post
+        Image" />
+      </div>
+      <div class="footer">
+        <div class="button">That's Cool</div>
+        <div class="button">I want to do this</div>
+        <div class="button">Follow</div>
+      </div>
+    </div>
+
+    <div class="post-box">
+      <!-- Repeat the same structure for two more post-boxes -->
+    </div>
+  </div>
+
+  <div class="dorm-battle">
+    <button class="profile-image">
+      <img src="static/images/DSC09485.JPG" alt="Profile" />
+    </button>
+    <div class="name">{{user.username}}</div>
+    <div>
+      <button class="profile-button">Profile</button>
+      <button class="follow-button">Follow</button>
+    </div>
+    <div class="points">
+      <div>Dorm Points</div>
+      <div>1000</div>
+    </div>
+    <div class="notes-tab">
+      <ul id="notes">
+        {% for note in user.notes %}
+        <li>
+          {{ note.data}}
+          <!-- <button type="button" class="close" onclick="deleteNote({{note.id}})">
+            Remove
+          </button> -->
+        </li>
+        {%endfor%}
+      </ul>
+      <form method="POST">
+        <textarea class="text-box" name="note" id="note"></textarea>
+        <div>
+          <button type="class" class="text-button">Add Note</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- <h2 align="center">Welcom {{user.username}}: Enter your notes</h2>
+<ul id="notes">
+  {% for note in user.notes %}
+  <li>
+    {{ note.data}}
+    
+  </li>
+  {%endfor%}
+</ul>
+<form method="POST">
+  <textarea align="center" name="note" id="note"></textarea>
+  <br />
+  <div align="center">
+    <button type="class">Add Note</button>
+  </div>
+</form> -->
+{% endblock %}

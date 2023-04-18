@@ -1,0 +1,12 @@
+.user-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.profile-image{
+    display: flex;
+    justify-self: center;
+    border: 2px;
+    border-radius: 30%;
+}
