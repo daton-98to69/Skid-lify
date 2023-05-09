@@ -1,0 +1,50 @@
+/* For the grid of the homepage */
+*{
+  margin:0;
+  padding: 0;
+}
+.home_background{
+  margin-left: 14%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.statement_bar{
+  /* background-image: url(statement.svg);
+  background-size: cover; */
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #096f58;
+  font-size: 20px;
+}
+/* Subdivide divides the section into different parts */
+.subdivide { 
+  flex-grow: 1;
+  display: flex;
+  height: 90vh;
+  padding: 10px;
+}
+
+.dashboard{
+  flex-basis: 60%;
+
+}
+
+.coffee_talks{
+  margin-top: 0px;
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+button{
+  color: black;
+  background-color: #ffd100;
+  border: transparent;
+
+}
+

@@ -1,97 +1,122 @@
 {% extends "index.html" %} {% block title %} Sign Up {% endblock %} {% block
 body %}
 
-<img class="wave" src="static/images/login_images/login_3.png" />
-<div class="container">
-  <div class="login-content">
-    <form method="POST">
-      <h2 class="title">Welcome</h2>
-      <div class="input-div one">
-        <div class="i">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="div">
-          <!-- <h5>Email</h5> -->
-          <input type="email" name="email" id="email" placeholder="Email" />
-        </div>
-      </div>
-      <div class="input-div pass">
-        <div class="i">
-          <i class="fas fa-lock"></i>
-        </div>
-        <div class="div">
-          <!-- <h5>username</h5> -->
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
+<div class="login-body">
+  <div class="container">
+    <div class="section-70-signup">
+      <a class="back-arrow" href="/login">
+        <svg viewBox="0 0 24 24">
+          <path
+            fill="#096f58"
+            d="M19 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H19z"
           />
-        </div>
+        </svg>
+      </a>
+      <h1 class="title-s">Skid-Lify</h1>
+      <h2 class="subtitle">"Skidmore Simplified!"</h2>
+
+      <p class="mission">
+        At SkidLify, we are on a mission to transform the academic experience
+        for students and faculty by fostering a vibrant and inclusive community
+        that is driven by knowledge, creativity, and collaboration. We believe
+        in cultivating a culture of knowledge-sharing, where our members can
+        learn from one another and contribute to the collective growth of the
+        community. Together, we all can aim to build a better future through
+        collaboration and innovation.
+      </p>
+      <h3 class="features-title">Features:</h3>
+      <ul class="features">
+        <li>Realtime Upto Date School Calendar</li>
+        <li>Platform to connect with like minded poeple</li>
+        <li>Effortless communication with professors and classmates</li>
+        <li>Efficient organization of assignments and deadlines</li>
+        <li>Emergency Communication System</li>
+        <li>Collaborative Dashboard for groups and entire campus</li>
+      </ul>
+    </div>
+    <div class="section-30-signup">
+      <div class="login-content-signup">
+        <form method="POST" enctype="multipart/form-data">
+          <h2 class="title-sign">Few Steps Away!</h2>
+          <h3 class="sub-title-s">Please enter valid information</h3>
+          <div class="form-group-s">
+            <label for="email" class="sign-label">Skidmore Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="off"
+              class="form-control-s"
+              placeholder="Enter your Skidmore - email"
+              required
+            />
+          </div>
+          <div class="form-group-s">
+            <label for="Username" class="sign-label">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="form-control-s"
+              placeholder="Enter your first and last name"
+              required
+            />
+          </div>
+          <div class="form-group-s">
+            <label for="password" class="sign-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control-s"
+              placeholder="Password must be more than 7-digits"
+              required
+            />
+          </div>
+          <!-- professor Unique Key for secure authentication -->
+          <div class="form-group-s">
+            <label for="password" class="sign-label">Re-enter Password</label>
+            <input
+              type="password"
+              name="password1"
+              id="password1"
+              class="form-control-s"
+              placeholder="Confirm Password"
+              required
+            />
+          </div>
+
+          <div class="form-group-s">
+            <label for="password" class="sign-label">Phone number</label>
+            <input
+              type="password"
+              name="password1"
+              id="password1"
+              class="form-control-s"
+              placeholder="*Optional"
+              required
+            />
+          </div>
+          <div class="form-group-s">
+            <label for="profile_picture" class="sign-label"
+              >Upload a profile picture</label
+            >
+            <input
+              type="file"
+              name="profile_picture"
+              id="profile_picture"
+            /><br />
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" />
+            I have read the terms and conditions of the application
+          </label>
+          <div class="signup-button">
+            <input type="submit" class="button-s" value="Sign Up" />
+          </div>
+        </form>
       </div>
-      <div class="input-div pass">
-        <div class="i">
-          <i class="fas fa-lock"></i>
-        </div>
-        <div class="div">
-          <!-- <h5>Password</h5> -->
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Create Password"
-          />
-        </div>
-      </div>
-      <div class="input-div pass">
-        <div class="i">
-          <i class="fas fa-lock"></i>
-        </div>
-        <div class="div">
-          <!-- <h5>Confirm Password</h5> -->
-          <input
-            type="password"
-            name="password1"
-            id="password1"
-            placeholder="Confirm Password"
-          />
-        </div>
-      </div>
-      <a href="#">Terms and Condition</a>
-      <input type="submit" class="btn" value="Sign Up" />
-    </form>
+    </div>
   </div>
 </div>
-<!-- <h2 align="center">This is our Sign Up page</h2>
-<form method="POST">
-  <h3>Enter sign-up information</h3>
-  <div>
-    <label for="email">Email Address</label>
-    <input type="email" name="email" id="email" placeholder="Email Address" />
-  </div>
-  <div>
-    <label for="username">First Name</label
-    ><input type="text" name="username" id="username" placeholder="User name" />
-  </div>
-  <div>
-    <label for="password">Password</label
-    ><input
-      type="password"
-      name="password"
-      id="password"
-      placeholder="Password"
-    />
-  </div>
-  <div>
-    <label for="password1">Password-Confirm</label
-    ><input
-      type="password1"
-      name="password1"
-      id="password1"
-      placeholder="Password-Confirm"
-    />
-  </div>
-  <br />
-  <button type="submit">Submit</button>
-</form> -->
 {% endblock %}

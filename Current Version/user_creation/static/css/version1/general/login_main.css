@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.login-body{
+    background-image: url("../../../svg/waves.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.section-70 { 
+    display: flex;
+    border-radius: 2px black;
+    width: 65%;
+    float: left;
+    height: 100vh;
+    justify-content: center;
+    transform: translateY(-25px);
+    
+  }
+  
+  .section-30 {
+    border-radius: 2px black;
+    display: flex;
+    width: 35%;
+    float: left;
+    padding-top: 0;
+    justify-content: center;
+  }
+  
+  #svg-background {
+    /* position: fixed; */
+    top: 10%;
+    left: 0;
+    width: 100%; /* adjust this value to your liking */
+    height: 100vh; /* maintain aspect ratio */
+    background-image: url("../../../svg/blob4.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  #svg-background-small {
+    /* position: fixed; */
+    top: 10%;
+    left: 0;
+    width: 60%; /* adjust this value to your liking */
+    height: 100vh; /* maintain aspect ratio */
+    background-image: url("../../../svg/blob4.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  /* Media query for screen sizes smaller than 600px */
+  @media screen and (max-width: 600px) {
+    .section-70 {
+      width: 100%;
+      float: none;
+    }
+    .section-30 {
+      width: 100%;
+      float: none;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+  }
+  
+
+  .login-box {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: #fff;
+    transition: right 0.5s ease-out;
+    z-index: 2;
+  }
+  

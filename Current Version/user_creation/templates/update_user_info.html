@@ -1,0 +1,63 @@
+<!-- update_user_info.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Update User Info</h1>
+      <form method="POST" action="{{ url_for('views.update_user_info') }}">
+        <div class="form-group">
+          <label for="subjects">Subjects:</label>
+          <input
+            type="text"
+            name="subjects"
+            class="form-control"
+            value="{{ current_user.user_info.subjects }}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="major">Major:</label>
+          <input
+            type="text"
+            name="major"
+            class="form-control"
+            value="{{ current_user.user_info.major }}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="quotes">Quotes:</label>
+          <input
+            type="text"
+            name="quotes"
+            class="form-control"
+            value="{{ current_user.user_info.quotes }}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="clubs">Clubs:</label>
+          <input
+            type="text"
+            name="clubs"
+            class="form-control"
+            value="{{ current_user.user_info.clubs }}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="profile_pic">Profile Picture:</label>
+          <input
+            type="text"
+            name="profile_pic"
+            class="form-control"
+            value="{{ current_user.user_info.profile_pic }}"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+  </body>
+</html>

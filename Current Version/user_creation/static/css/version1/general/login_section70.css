@@ -1,0 +1,86 @@
+
+/* Center the content of the centered-div */
+.centered-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
+  
+  /* Style the title */
+  .title1 {
+    font-size: 78px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #096f58;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+  }
+  
+  /* Style the subtitle */
+  .subtitle {
+    font-size: 28px;
+    margin-bottom: 1em;
+    color: #555;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* Style the button rows */
+  .button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  
+  /* Style the buttons */
+  .button {
+    width: 180px;
+    height: 70px;
+    margin: 10px 30px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #ffd100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #096f58;
+    position: relative;
+  }
+  
+  /* Style the buttons when hovered */
+  .button:hover {
+    background-color: #096f58;
+    color: #fff;
+  }
+  
+  /* Style the description dropdown */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #555;
+    color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  /* Show the description dropdown on button click */
+  .button:focus .dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Hide the description dropdown when not focused */
+  .button:not(:focus) .dropdown {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
